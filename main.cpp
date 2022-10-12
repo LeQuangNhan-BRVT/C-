@@ -66,6 +66,16 @@ era:
 		else if (option == 9) {
 			deleteLast(list);
 		}
+		else if (option == 10) {
+			int posy;
+			cout << "\nNhap vi tri can xoa:  ";
+			cin >> posy;
+			if (posy<1 || posy>countNode(list)) {
+				cout << "\nVi tri khong hop le";
+				goto era;
+			}
+			deletePosition(list, posy);
+		}
 		else
 		{
 			break;

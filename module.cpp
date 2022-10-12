@@ -167,3 +167,25 @@ void deleteLast(NODEPTR& list)
 	//cap nhat lai gan cuoi thanh cuoi danh sach
 	last->next = NULL;
 }
+void deletePosition(NODEPTR& list, int pos) {
+	NODEPTR temp = list;
+	
+	if (list == NULL) {
+		return;
+	}
+	else if (pos == 1) {
+		deleteFirst(list);
+	}
+	else
+	{
+		for (int i = 1; i <= pos - 2; i++) {
+			temp = temp->next;
+		}
+		//temp: pos -1
+		NODEPTR	eraser = temp->next;//node can xoa
+		//cho thang truoc eraser tro den thang sau eraser
+		temp->next = eraser->next;
+		delete eraser;
+	}
+	
+}

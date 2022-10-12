@@ -27,3 +27,4 @@ void insertNode(NODEPTR& list, int pos, subject sub);
 int countNode(NODEPTR list);
 void deleteFirst(NODEPTR& list);
 void deleteLast(NODEPTR& list);
+void deletePosition(NODEPTR& list, int pos);
