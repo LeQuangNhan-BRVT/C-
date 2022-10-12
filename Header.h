@@ -28,3 +28,5 @@ int countNode(NODEPTR list);
 void deleteFirst(NODEPTR& list);
 void deleteLast(NODEPTR& list);
 void deletePosition(NODEPTR& list, int pos);
+void sortAscendingTC(NODEPTR &list);
+void sortDescendingTC(NODEPTR& list);

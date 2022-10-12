@@ -187,5 +187,34 @@ void deletePosition(NODEPTR& list, int pos) {
 		temp->next = eraser->next;
 		delete eraser;
 	}
-	
+}
+void sortAscendingTC(NODEPTR& list) {
+	NODEPTR p = list;
+	NODEPTR q = p->next;
+	while (p->next!=NULL)
+	{
+		q = p->next;
+		while (q!=NULL)
+		{
+			if (p->data.TC > q->data.TC)
+				swap(p->data, q->data);
+			q = q->next;
+		}
+		p = p->next;
+	}
+}
+void sortDescendingTC(NODEPTR& list) {
+	NODEPTR p = list;
+	NODEPTR q = p->next;
+	while (p->next != NULL)
+	{
+		q = p->next;
+		while (q != NULL)
+		{
+			if (p->data.TC < q->data.TC)
+				swap(p->data, q->data);
+			q = q->next;
+		}
+		p = p->next;
+	}
 }

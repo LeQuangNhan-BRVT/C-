@@ -16,6 +16,8 @@ era:
 		cout << "\n8.Xoa node dau tien";
 		cout << "\n9.Xoa node cuoi cung";
 		cout << "\n10.Xoa node bat ky";
+		cout << "\n11.Sap xep tang dan theo Tin Chi ";
+		cout << "\n12.Sap xep giam dan theo Tin Chi ";
 		cout << "\n0.Exit!";
 		cout << "\nLua chon : ";
 		int option;
@@ -75,6 +77,12 @@ era:
 				goto era;
 			}
 			deletePosition(list, posy);
+		}
+		else if (option == 11) {
+			sortAscendingTC(list);
+		}
+		else if (option == 12) {
+			sortDescendingTC(list);
 		}
 		else
 		{
